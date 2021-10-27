@@ -1064,7 +1064,7 @@ form {
     padding-bottom: 0;
   }
   .project__link {
-    width: 40%;
+    width: 80%;
     margin: 0 auto;
   }
   .project__link::after, .project__link::before {
@@ -1244,7 +1244,7 @@ form {
     padding-bottom: 0;
   }
   .project__link {
-    width: 40%;
+    width: 80%;
     margin: 0 auto;
   }
   .project__link::after, .project__link::before {
