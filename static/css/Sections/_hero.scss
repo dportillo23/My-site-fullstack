@@ -1,0 +1,48 @@
+.hero {
+    padding: 5em 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.hero__title {
+    display: flex;
+    width: 100%;
+
+    img {
+        width: 15%;
+        position: absolute;
+        left: 15%;
+    }
+}
+
+.hero__greeting {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 4.5rem;
+    }
+}
+
+.hero__me {
+    font-family: $ff-accent;
+    font-size: 7rem;
+    margin-top: 0.5em;
+}
+
+.hero__dedication {
+    margin: 1em 0;
+    font-size: 3rem;
+    color: $col-accent
+}
+
+.hero__image {
+    width: 50%;
+}

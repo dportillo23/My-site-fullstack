@@ -1,0 +1,35 @@
+.contact_me {
+    position: absolute;
+    top: -4em;
+    height: 8em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    padding: 2em;
+    z-index: 1;
+    font-size: 2rem;
+}
+
+.contact__text {
+    font-size: inherit;
+    flex-basis: 48%;
+    color: $col-accent;
+    line-height: 1.5;
+}
+
+.contact__btn {
+    font-size: 0.75em;
+    flex-basis: 45%;
+    height: 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bolder;
+    position: relative;
+    max-width: 400px;
+
+}

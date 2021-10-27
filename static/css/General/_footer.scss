@@ -1,0 +1,130 @@
+.footer {
+    position: relative;
+    background: $col-secondary;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 2em 0 4em;
+}
+
+.footer__me {
+    display: flex;
+    width: 50%;
+    gap: 2em;
+}
+
+.footer_pics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+.profile__pic {
+    width: 100%;
+}
+
+.vs__code_div {
+    background: #fff;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    margin: 1em 0;
+}
+
+.footer__greetings {
+    width: 100%;
+}
+
+.footer__greetings h1 {
+    font-size: 3rem;
+    color: $col-primary;
+    margin-bottom: 1em;
+}
+
+.footer__greetings p {
+    margin-bottom: 1em;
+}
+
+.footer__social {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__social__link {
+    font-size: 2rem;
+    margin: 0 0.5em;
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    border-radius: 30%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer__social__link i {
+    color: $col-secondary;
+    line-height: 4rem;
+    transition: transform linear 0.25s;
+}
+
+.footer__social__link:hover i {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.footer__social__link::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: $col-primary;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.footer__social__link:hover::before {
+    animation: social-effect 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes social-effect {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
+
+.footer__end {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__end img {
+    width: 7%;
+    margin-top: 1em;
+}

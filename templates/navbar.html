@@ -1,0 +1,15 @@
+<nav class="nav row">
+    <div class="hamburger">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+    </div>
+    <div class="nav__logo"><a href="{{ url_for('views.home') }}"><img src="{{ url_for('static', filename='images/Logos/Logo.svg') }}" alt="Logo"></a></div>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="{{ url_for('views.home') }}" class="nav__link">Home</a></li>
+      <li class="nav__item"><a href="{{ url_for('views.home') }}#skills" class="nav__link">Skills</a></li>
+      <li class="nav__item"><a href="{{ url_for('views.home') }}#projects" class="nav__link">Projects</a></li>
+      <li type="button" class="nav__item"><a id="contactBtn" href="{{ url_for('views.contact') }}" class="btn nav__btn">Contact</a></li>
+      
+    </ul>
+  </nav>

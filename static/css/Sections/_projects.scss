@@ -1,0 +1,94 @@
+$font-size-project: 1.5rem;
+
+#projects {
+    min-height: 100vh;
+    position: relative;
+    padding: 5em 0 15em;
+
+    .projects__logo {
+        width: 40%;
+        position: absolute;
+        bottom: 0;
+        left: -7%;
+        z-index: -1;
+        opacity: 0.75;
+    }
+}
+
+.project {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
+
+.project__text {
+    width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.25;
+
+    p {
+        margin-bottom: 0.5em;
+    }
+}
+
+.project__link {
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    align-self: stretch;
+
+    &::before {
+        font-size: $font-size-project;
+        color: #fff;
+        content: attr(data-to-content);
+        display: grid;
+        place-items: center;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        left: -100%;
+        top: 0;
+        backdrop-filter: blur(0.1rem);
+        background: linear-gradient(to bottom right, rgba(122, 45, 255, 0.5), rgba(62, 163, 255, 0.5));
+        transition: transform ease 0.5s;
+        /* border-top-left-radius: 100rem;
+        border-top-right-radius: 100rem; */
+        border-radius: 1rem 1rem 0 0;
+        }
+
+        &:hover::before {
+            transform: translateX(100%);
+        }
+
+        &::after {
+            font-size: $font-size-project;
+            color: #fff;
+            content: "Go to Website";
+            display: grid;
+            place-items: center;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            right: -100%;
+            bottom: 0;
+            backdrop-filter: blur(0.1rem);
+            background: linear-gradient(to top right, rgba(122, 45, 255, 0.5), rgba(62, 163, 255, 0.5));
+            transition: transform ease 0.5s;
+            /* border-bottom-left-radius: 100rem;
+            border-bottom-right-radius: 100rem; */
+            border-radius: 0 0 1rem 1rem;
+        }
+
+        &:hover::after {
+            transform: translateX(-100%);
+        }
+}
+
+
+.project__img {
+    width: 100%;
+    border-radius: 1rem;
+}

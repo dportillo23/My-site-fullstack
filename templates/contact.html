@@ -1,0 +1,91 @@
+{% with title="Contact me" %}
+{% include "head.html" %}
+{% endwith %}
+
+<body>
+  <header id="contact" class="container">
+    <!-- Navigation Bar section -->
+    {% include "navbar.html" %}
+
+    <!-- Hero--Contact section -->
+    <div class="hero--contact">
+      <div class="hero__title">
+        <img class="contact__avatar" src="{{ url_for('static', filename='images/Logos/avataaars 1.svg') }}" alt="avatar-pic">
+        <div class="hero__greeting">
+          <h1 class="hero__me">Contact me!</h1>
+        </div>
+
+
+  </header>
+
+  <!-- Contact section -->
+  <section class="sec__contact">
+    <div class="container center">
+      <div class="card card__contact">
+        <h1 class="contact__title">Hi, thank you for reaching out! <br>Please let me know how I can help you</h1>
+        <div class="form__container">
+
+          <form method="post" novalidate>
+              {{form.csrf_token}}
+            <div class="form__box">
+              <div class="form__item single">
+                {{ form.name(class_="contact__input") }}
+                {{ form.name.label(class_="contact__label") }}
+              </div>
+
+              <div class="form__item single">
+                {{ form.email(class_="contact__input") }} 
+                {{ form.email.label(class_="contact__label") }} 
+              </div>
+
+              <div class="form__item double">
+                {{ form.message(class_="contact__input contact__textarea") }}
+                {{ form.message.label(class_="contact__label") }} 
+                </label>
+              </div>
+
+
+              <div class="form__item form__btn">{{form.submit(class_="btn contact__button")}}
+                <!-- <input type="submit" value="Send!" class="btn contact__button"> -->
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<!-- footer section -->
+  <footer class="footer">
+
+    <div class="container">
+      <div class="row center margin--bottom">
+        
+        <div class="footer__social">
+
+          <a class="footer__social__link" href="https://github.com/dportillo23"><i class="fab fa-github"></i></a>
+          <a class="footer__social__link" href="https://www.linkedin.com/in/daniel-portillo23"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a class="footer__social__link" href="https://twitter.com/DanielEPortillo"><i class="fab fa-twitter"></i></a>
+          <a class="footer__social__link" href="https://www.instagram.com/devportillo/"><i
+              class="fab fa-instagram"></i></a>
+
+
+
+        </div>
+
+
+      </div>
+      <div class="footer__end">
+        <p class="copyright">© <span class="year">2021</span>. Made and powered by me</p>
+        <img src="{{ url_for('static', filename='images/Logos/Logo_black&white.svg') }}" alt="" class="footler__logo">
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='Js/app.js') }}"></script>
+
+</body>
+
+</html>
