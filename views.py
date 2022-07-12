@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, redirect, url_for
 from form import MyForm
-from email_function import auto_respond_email
+from functions import auto_respond_email
 
 views = Blueprint(__name__, "views")
 

@@ -30,7 +30,7 @@ my_email = os.getenv("EMAIL")
 password = os.getenv("PASS")
 me = os.getenv("MY_NAME")
 
-with open("./email_function/email.html", 'rb') as html:
+with open("./functions/email.html", 'rb') as html:
     html_content = html.read().decode("UTF-8")
 
 
@@ -61,17 +61,17 @@ def auto_respond_email(name, email, message):
 
     # Embedding images
     for social in social_list:
-        with open(f"email_function/images/{social}-logo.png", "rb") as fp:
+        with open(f"functions/images/{social}-logo.png", "rb") as fp:
             social_image = MIMEImage(fp.read())
         social_image.add_header('Content-ID', f'<{social}>')
         msg.attach(social_image)
 
-    with open("email_function/images/Logo.png", 'rb') as fp:
+    with open("functions/images/Logo.png", 'rb') as fp:
         logo = MIMEImage(fp.read())
     logo.add_header('Content-ID', '<logo>')
     msg.attach(logo)
 
-    with open("email_function/images/avataaars 1.png", 'rb') as fp:
+    with open("functions/images/avataaars 1.png", 'rb') as fp:
         msgImage = MIMEImage(fp.read())
     msgImage.add_header('Content-ID', '<image1>')
     msg.attach(msgImage)

@@ -116,6 +116,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+my-website-230490-firebase-adminsdk-hxyx7-fd22ea505a.json
 
 # Spyder project settings
 .spyderproject
@@ -141,3 +142,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 .vercel
+node_modules
