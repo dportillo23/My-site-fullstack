@@ -3,12 +3,12 @@
 {% endwith %}
 
 <body>
-  <header id="contact" class="container">
+  <header id="contact" class="toggable">
     <!-- Navigation Bar section -->
     {% include "navbar.html" %}
 
     <!-- Hero--Contact section -->
-    <div class="hero--contact">
+    <div class="hero--contact container">
       <div class="hero__title">
         <img class="contact__avatar" src="{{ url_for('static', filename='images/Logos/avataaars 1.svg') }}" alt="avatar-pic">
         <div class="hero__greeting">
@@ -84,7 +84,7 @@
     </div>
   </footer>
 
-  <script src="{{ url_for('static', filename='Js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='Js/contact.js') }}"></script>
 
 </body>
 

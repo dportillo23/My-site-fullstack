@@ -1,7 +1,7 @@
 .footer {
     position: relative;
-    background: $col-secondary;
-    color: #fff;
+    background: var(--col-secondary);
+    color: var(--col-white);
     font-size: 1.2rem;
     padding: 2em 0 4em;
 }
@@ -30,7 +30,7 @@
 
 .footer__greetings h1 {
     font-size: 3rem;
-    color: #fff;
+    color: var(--col-white);
     margin-bottom: 1em;
 }
 
@@ -51,33 +51,33 @@
     width: 4.5rem;
     height: 4.5rem;
     text-align: center;
-    border-radius: 30%;
+    border-radius: 15%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     display: grid;
     place-items: center;
     text-decoration: none;
-    background: #fff;
+    background: var(--col-white);
     overflow: hidden;
     position: relative;
 }
 
 .footer__social__link i {
-    color: $col-secondary;
+    color: var(--col-secondary);
     line-height: 4rem;
     transition: transform linear 0.25s;
 }
 
 .footer__social__link:hover i {
     transform: scale(1.2);
-    color: #fff;
+    color: var(--col-white);
 }
 
 .footer__social__link::before {
     content: '';
     position: absolute;
-    width: 120%;
-    height: 120%;
-    background: $col-primary;
+    width: 150%;
+    height: 150%;
+    background: var(--col-primary);
     transform: rotate(45deg);
     left: -110%;
     top: 90%;
@@ -85,8 +85,8 @@
 
 .footer__social__link:hover::before {
     animation: social-effect 0.7s 1;
-    top: -10%;
-    left: -10%;
+    top: -20%;
+    left: -20%;
 }
 
 @keyframes social-effect {
@@ -96,13 +96,13 @@
     }
 
     50% {
-        left: 10%;
+        left: 5%;
         top: -30%;
     }
 
     100% {
-        left: -10%;
-        top: -10%;
+        left: -20%;
+        top: -20%;
     }
 }
 

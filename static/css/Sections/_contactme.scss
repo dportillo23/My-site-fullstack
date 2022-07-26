@@ -16,7 +16,7 @@
 .contact__text {
     font-size: inherit;
     flex-basis: 48%;
-    color: $col-accent;
+    color: var(--col-accent);
     line-height: 1.5;
 }
 
@@ -27,7 +27,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--col-white);
     font-weight: bolder;
     position: relative;
     max-width: 400px;

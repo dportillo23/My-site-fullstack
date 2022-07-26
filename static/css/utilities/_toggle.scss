@@ -1,0 +1,28 @@
+.nav__dark {
+    cursor: pointer;
+}
+
+.nav__dark.dark {
+
+    &>* {
+        fill: var(--col-white);
+    }
+
+    & #toggle-circle {
+        transform: translateX(0);
+    }
+
+    & #toggle-star {
+        transform: rotate(360deg);
+    }
+}
+
+#toggle-circle {
+    transform: translateX(-70px);
+    transition: transform 500ms ease;
+}
+
+#toggle-star {
+    transition: transform 750ms ease;
+    transform-origin: center;
+}

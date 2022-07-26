@@ -7,7 +7,6 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 // Dark Mode
 const darkButton = document.querySelector(".nav__dark");
 const navLogo = document.querySelector(".logo--navigation");
-const bigLogo = document.querySelector(".projects__logo");
 
 const darkModePath = "static/images/Logos/Logo_dark_mode.svg"
 const lightModePath = "static/images/Logos/Logo.svg"
@@ -16,11 +15,9 @@ function checkIfDarkMode() {
     if (document.body.classList.contains("dark")) {
         darkButton.classList.add("dark");
         navLogo.src = darkModePath;
-        bigLogo.src = darkModePath;
     } else {
         darkButton.classList.remove("dark");
         navLogo.src = lightModePath;
-        bigLogo.src = lightModePath;
     }
 }
 
@@ -73,15 +70,6 @@ hamburger.addEventListener("click", () => {
         link.classList.toggle('fade')
     })
 })
-
-// Projects background images
-const projectImages = document.querySelectorAll(".project__card");
-
-projectImages.forEach(element => {
-    const imageUrl = `static/images/projects/${element.dataset.bg}`;
-    element.style.backgroundImage = (`url("${imageUrl}")`);
-});
-
 
 // Year
 const currentYear = new Date().getFullYear();

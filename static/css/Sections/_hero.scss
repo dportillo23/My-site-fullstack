@@ -11,6 +11,7 @@
 .hero__title {
     display: flex;
     width: 100%;
+    color: var(--col-font);
 
     img {
         width: 15%;
@@ -32,7 +33,7 @@
 }
 
 .hero__me {
-    font-family: $ff-accent;
+    font-family: var(--ff-accent);
     font-size: 7rem;
     margin-top: 0.5em;
 }
@@ -40,9 +41,21 @@
 .hero__dedication {
     margin: 1em 0;
     font-size: 3rem;
-    color: $col-accent
+    color: var(--col-accent)
+}
+
+body.dark .hero__dedication {
+    color: var(--col-primary);
 }
 
 .hero__image {
     width: 50%;
+}
+
+#download__button {
+    margin-bottom: 1.5rem;
+    & > i {
+        margin-right: 1rem;
+    }
+
 }

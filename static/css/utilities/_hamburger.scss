@@ -1,0 +1,47 @@
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 2.5rem;
+    height: 0.3rem;
+    margin: 0.6em 0;
+    transition: 0.4s;
+}
+
+.bar1,
+.bar3 {
+    background-color: var(--col-primary);
+}
+
+.bar2 {
+    background-color: var(--col-secondary);
+}
+
+.change {
+    position: fixed;
+
+    * {
+        background: var(--col-white);
+    }
+
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-0.64rem, 0.25rem);
+        transform: rotate(-45deg) translate(-0.64rem, 0.25rem);
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-1rem, -0.6rem);
+        transform: rotate(45deg) translate(-1rem, -0.6rem);
+    }
+}

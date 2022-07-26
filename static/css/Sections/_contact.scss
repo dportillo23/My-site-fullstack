@@ -13,7 +13,7 @@
 }
 
 .sec__contact {
-    background: linear-gradient(to bottom, $col-primary 50%, $col-secondary);
+    background: linear-gradient(to bottom, var(--col-primary) 50%, var(--col-secondary));
     min-height: 100vh;
     display: flex;
     padding: 5em 0;
@@ -53,7 +53,7 @@ form {
 }
 
 .form__box {
-    font: $ff-primary;
+    font: var(--ff-primary);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -96,7 +96,7 @@ form {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--col-white);
     font-weight: bolder;
     position: relative;
     border: none;
@@ -114,9 +114,9 @@ form {
     box-sizing: content-box;
 
     &:focus {
-        border: solid $col-accent 2px;
+        border: solid var(--col-accent) 2px;
         outline: none;
-        box-shadow: 0 0 20px $col-primary;
+        box-shadow: 0 0 20px var(--col-primary);
     }
 
     &:focus + .contact__label {
@@ -137,17 +137,17 @@ form {
 }
 
 .contact__label {
-    color: #fff;
+    color: var(--col-white);
     position: absolute;
     font-size: 1.2rem;
-    color: $col-accent;
+    color: var(--col-accent);
     pointer-events: none;
     transition: all 0.3s ease;
     transform: translate(1.1em, 0.3em)
 }
 
 .contact__span {
-    color: #fff;
+    color: var(--col-white);
 }
 
 .margin--bottom {

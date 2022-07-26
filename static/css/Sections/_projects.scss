@@ -1,94 +1,159 @@
 $font-size-project: 1.5rem;
 
 #projects {
+
+    --clr-react: rgb(83, 193, 222);
+    --clr-sass: #c69;
+    --clr-html: #e34c26;
+    --clr-js: #f0db4f;
+    --clr-css: #264de4;
+
+
     min-height: 100vh;
     position: relative;
     padding: 5em 0 15em;
+    background-color: var(--col-bg);
 
     .projects__logo {
         width: 40%;
         position: absolute;
         bottom: 0;
         left: -7%;
-        z-index: -1;
+        z-index: 0;
         opacity: 0.75;
     }
 }
 
-.project {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2em;
+.projects--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 5rem;
+    place-items: center;
 }
 
-.project__text {
-    width: 60%;
-    font-size: 1.2rem;
-    line-height: 1.25;
+.project__card {
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: auto 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
 
-    p {
-        margin-bottom: 0.5em;
+    transition: transform 500ms ease;
+
+    &:hover .project__title::after {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:hover .project__card--content {
+        transform: translateY(0);
     }
 }
 
-.project__link {
-    width: 20%;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
-    align-self: stretch;
+.project__card--content {
+    --padding: 2rem;
+    padding: var(--padding);
+    background: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.3) 20%,
+            rgba(0, 0, 0, 1));
+    height: fit-content;
+    transform: translateY(calc(100% - var(--padding) - 3rem));
 
-    &::before {
-        font-size: $font-size-project;
-        color: #fff;
-        content: attr(data-to-content);
-        display: grid;
-        place-items: center;
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        left: -100%;
-        top: 0;
-        backdrop-filter: blur(0.1rem);
-        background: linear-gradient(to bottom right, rgba(122, 45, 255, 0.5), rgba(62, 163, 255, 0.5));
-        transition: transform ease 0.5s;
-        /* border-top-left-radius: 100rem;
-        border-top-right-radius: 100rem; */
-        border-radius: 1rem 1rem 0 0;
-        }
-
-        &:hover::before {
-            transform: translateX(100%);
-        }
-
-        &::after {
-            font-size: $font-size-project;
-            color: #fff;
-            content: "Go to Website";
-            display: grid;
-            place-items: center;
-            position: absolute;
-            width: 100%;
-            height: 50%;
-            right: -100%;
-            bottom: 0;
-            backdrop-filter: blur(0.1rem);
-            background: linear-gradient(to top right, rgba(122, 45, 255, 0.5), rgba(62, 163, 255, 0.5));
-            transition: transform ease 0.5s;
-            /* border-bottom-left-radius: 100rem;
-            border-bottom-right-radius: 100rem; */
-            border-radius: 0 0 1rem 1rem;
-        }
-
-        &:hover::after {
-            transform: translateX(-100%);
-        }
+    transition: transform 500ms ease-out;
 }
 
+.project__title {
+    color: var(--col-white);
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+    width: max-content;
 
-.project__img {
-    width: 100%;
-    border-radius: 1rem;
+    &::after {
+        content: '';
+        width: calc(100% + var(--padding));
+        height: 0.25rem;
+        background: linear-gradient(to right, var(--col-primary), var(--col-secondary));
+        position: absolute;
+        bottom: -0.75ch;
+        left: calc(var(--padding) * -1);
+        transform: scaleX(0);
+        transform-origin: left;
+
+        transition: transform 350ms ease-out 200ms;
+    }
+}
+
+.project__text {
+    color: rgba(255, 255, 255, 0.9);
+
+    & > a {
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.project__tools {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 0;
+}
+
+.tool {
+    color: var(--col-white);
+    padding: 0.25em 0.75em;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+
+    &::before {
+        font-family: "Font Awesome 5 Brands";
+        font-weight: 400;
+        margin-right: 0.5rem;
+    }
+}
+
+.react {
+    background-color: rgb(83, 193, 222);
+
+    &::before {
+        content: "\f41b";
+    }
+}
+
+.sass {
+    background-color: var(--clr-sass);
+
+    &::before {
+        content: "\f41e";
+    }
+}
+
+.html--class {
+    background-color: var(--clr-html);
+
+    &::before {
+        content: "\f13b";
+    }
+}
+
+.js--class {
+    background-color: var(--clr-js);
+
+    &::before {
+        content: "\f3b9";
+    }
+}
+
+.css--class {
+    background-color: var(--clr-css);
+
+    &::before {
+        content: "\f13c";
+    }
 }

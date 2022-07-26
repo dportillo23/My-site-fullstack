@@ -1,8 +1,23 @@
-// Colors
-$col-primary: #6F42FF;
-$col-secondary: #3EA3FF;
-$col-accent: #001C65;
+:root {
+    /* Colors */
+    --col-primary: #6F42FF;
+    --col-secondary: #3EA3FF;
+    --col-accent: #001C65;
+    --col-white: #fff;
+    --col-black: #000;
 
-// Fonts
-$ff-primary: 'Oxygen', sans-serif;
-$ff-accent: 'Satisfy', cursive;
+
+    /* Fonts */
+    --ff-primary: 'Oxygen', sans-serif;
+    --ff-accent: 'Satisfy', cursive;
+}
+
+body {
+    --col-bg: #fff;
+    --col-font: #000;
+
+    &.dark {
+        --col-bg: hsl(225, 6%, 15%);
+        --col-font: #fff;
+    }
+}

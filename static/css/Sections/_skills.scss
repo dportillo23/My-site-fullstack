@@ -3,7 +3,7 @@
 }
 
 #skills {
-    background: linear-gradient(to bottom, $col-primary 50%, $col-secondary);
+    background: linear-gradient(to bottom, var(--col-primary) 50%, var(--col-secondary));
     min-height: 100vh;
     display: flex;
     padding: 5em 0;
@@ -46,11 +46,6 @@
     min-height: 50vh;
     transition: transform ease-in-out 0.5s;
 
-    // &:hover {
-    //     transform: scale(1.1);
-    //     box-shadow: 0 0 60px $col-primary;
-    // }
-
     img {
         width: 30%;
 
@@ -58,7 +53,6 @@
 }
 
 .card__text {
-    // text-align: left;
     font-size: 1.05rem;
     line-height: 1.25em;
     margin-bottom: 1em;
@@ -66,7 +60,7 @@
 
 .card__title {
     font-size: 1.4rem;
-    color: $col-accent;
+    color: var(--col-accent);
     margin: 1em 0 2em;
 }
 

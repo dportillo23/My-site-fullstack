@@ -1,12 +1,17 @@
 .message_development {
-    color: $col-primary;
-    text-shadow: 0 0 5px $col-secondary;
+    color: var(--col-primary);
+    text-shadow: 0 0 5px var(--col-secondary);
 }
 
 body {
-    font-family: $ff-primary;
+    font-family: var(--ff-primary);
     margin: 0;
-    color: #000;
+    color: var(--col-black);
+}
+
+.toggable {
+    background-color: var(--col-bg);
+    transition: background-color 250ms ease-in-out;
 }
 
 .container {
@@ -31,26 +36,34 @@ body {
     align-items: center;
     text-decoration: none;
     letter-spacing: 1.2;
-    color: #fff;
-    background: linear-gradient(to bottom, $col-primary, $col-secondary);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
     padding: 0.5em 1.5em;
-    border-radius: 3rem;
+    border-radius: 0.5rem;
     outline: none;
     cursor: pointer;
+    color: var(--col-white);
+    background: linear-gradient(to bottom, var(--col-primary), var(--col-secondary));
+    z-index: 1;
 
     &:hover {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        border: 1px solid $col-primary
+        outline: 2px solid var(--col-primary)
     }
+
+    &::before {
+        z-index: -1;
+
+    }
+
+
 }
 
 .card {
-    border-radius: 3rem;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-radius: 1rem;
+    border-top: 1px solid var(--col-white);
+    border-left: 1px solid var(--col-white);
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
     background: linear-gradient(to right top,
             rgba(255, 255, 255, 0.7),
