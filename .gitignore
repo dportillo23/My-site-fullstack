@@ -143,3 +143,6 @@ dmypy.json
 cython_debug/
 .vercel
 node_modules
+
+# Make file
+makefile
