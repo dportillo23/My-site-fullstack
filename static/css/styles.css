@@ -518,21 +518,6 @@ body.dark .hero__dedication {
   transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
-.project__card:hover .project__title::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.project__card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.project__card:hover .project__card--content {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .project__card--content {
   --padding: 2rem;
   padding: var(--padding);
@@ -541,8 +526,6 @@ body.dark .hero__dedication {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -webkit-transform: translateY(calc(100% - var(--padding) - 3rem));
-          transform: translateY(calc(100% - var(--padding) - 3rem));
   -webkit-transition: -webkit-transform 500ms ease-out;
   transition: -webkit-transform 500ms ease-out;
   transition: transform 500ms ease-out;
@@ -568,8 +551,6 @@ body.dark .hero__dedication {
   position: absolute;
   bottom: -0.75ch;
   left: calc(var(--padding) * -1);
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transition: -webkit-transform 350ms ease-out 200ms;
@@ -1071,6 +1052,29 @@ form {
 }
 
 /* Media Queries */
+@media (hover: hover) {
+  .project__card:hover .project__title::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .project__card:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .project__card:hover .project__card--content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .project__card--content {
+    -webkit-transform: translateY(calc(100% - var(--padding) - 3rem));
+            transform: translateY(calc(100% - var(--padding) - 3rem));
+  }
+  .project__title::after {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   html {
     font-size: 14px;
