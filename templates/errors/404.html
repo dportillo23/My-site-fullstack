@@ -3,7 +3,25 @@
 {% endwith %}
 
 <body>
-    <h1>404 Page not found</h1>
+
+    <header class="toggable">
+        <div class="hero container">
+            <div class="hero__title">
+              <img class="avatar" src="{{ url_for('static', filename='images/Logos/avataaars 1.svg') }}" alt="avatar-pic">
+              <div class="hero__greeting">
+                <h1 class="hero__me">Oops...</h1>
+              </div>
+            </div>
+            <h2 class="hero__dedication">
+              <!-- <span class="message_development">SITE UNDER DEVELOPMENT</span><br> -->
+              Looks like you got lost and got a 404 please check the URL and try again.
+            </h2>
+            <a class="btn" id="download__button" href="{{ url_for('views.home') }}"><i class="fa-solid fa-house"></i>Go to Homepage</a>    
+      
+          </div>
+
+        </div>
+    </header>
 </body>
 
 </html>

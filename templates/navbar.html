@@ -6,15 +6,17 @@
     </div>
     <div class="nav__logo"><a href="{{ url_for('views.home') }}"><img class="logo--navigation" src="{{ url_for('static', filename='images/Logos/Logo.svg') }}" alt="Logo"></a></div>
 
-    <svg class="nav__dark" width="40" height="40" viewBox="0 0 425 425" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path id="toggle-star" fill-rule="evenodd" clip-rule="evenodd" d="M66 146.132L0 212.132L66 278.132V362H149.868L212.132 424.264L274.396 362H366V270.396L424.264 212.132L366 153.868V62H274.132L212.132 0L150.132 62H66V146.132ZM212 312C267.228 312 312 267.228 312 212C312 156.772 267.228 112 212 112C156.772 112 112 156.772 112 212C112 267.228 156.772 312 212 312Z" fill="black"/>
-      <path id="toggle-circle" d="M297 212C297 258.944 258.944 297 212 297C165.056 297 127 258.944 127 212C127 165.056 165.056 127 212 127C258.944 127 297 165.056 297 212Z" fill="black"/>
-      </svg>
+    <div class="nav__dark--div">
+      <svg class="nav__dark" width="40" height="40" viewBox="0 0 425 425" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="toggle-star" fill-rule="evenodd" clip-rule="evenodd" d="M66 146.132L0 212.132L66 278.132V362H149.868L212.132 424.264L274.396 362H366V270.396L424.264 212.132L366 153.868V62H274.132L212.132 0L150.132 62H66V146.132ZM212 312C267.228 312 312 267.228 312 212C312 156.772 267.228 112 212 112C156.772 112 112 156.772 112 212C112 267.228 156.772 312 212 312Z" fill="black"/>
+        <path id="toggle-circle" d="M297 212C297 258.944 258.944 297 212 297C165.056 297 127 258.944 127 212C127 165.056 165.056 127 212 127C258.944 127 297 165.056 297 212Z" fill="black"/>
+        </svg>
+    </div>
 
     <ul class="nav__list">
-      <li class="nav__item"><a href="{{ url_for('views.home') }}#home" class="nav__link">Home</a></li>
-      <li class="nav__item"><a href="{{ url_for('views.home') }}#skills" class="nav__link">Skills</a></li>
-      <li class="nav__item"><a href="{{ url_for('views.home') }}#projects" class="nav__link">Projects</a></li>
+      <li class="nav__item page--link"><a href="{{ url_for('views.home') }}#home" class="nav__link">Home</a></li>
+      <li class="nav__item page--link"><a href="{{ url_for('views.home') }}#skills" class="nav__link">Skills</a></li>
+      <li class="nav__item page--link"><a href="{{ url_for('views.home') }}#projects" class="nav__link">Projects</a></li>
       <li type="button" class="nav__item"><a id="contactBtn" href="{{ url_for('views.contact') }}" class="btn nav__btn">Contact</a></li>
       
     </ul>

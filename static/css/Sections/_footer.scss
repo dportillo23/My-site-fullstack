@@ -7,17 +7,11 @@
 }
 
 .footer__me {
-    display: flex;
+    display: grid;
     width: 50%;
     gap: 2em;
-}
-
-.footer_pics {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    grid-template-columns: 0.2fr 1fr;
     align-items: center;
-    width: 15%;
 }
 
 .profile__pic {
@@ -26,6 +20,7 @@
 
 .footer__greetings {
     width: 100%;
+    grid-column: 2 / 2;
 }
 
 .footer__greetings h1 {
@@ -49,7 +44,7 @@
     font-size: 2rem;
     margin: 0 0.5em;
     width: 4.5rem;
-    height: 4.5rem;
+    height: auto;
     text-align: center;
     border-radius: 15%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

@@ -1,5 +1,3 @@
-const contactBtn = document.getElementById("contactBtn");
-
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add("dark");
 }
@@ -30,6 +28,9 @@ darkButton.addEventListener("click", e => {
     document.body.classList.toggle("dark");
     checkIfDarkMode();
 })
+
+
+const contactBtn = document.getElementById("contactBtn");
 
 function checkOrientation() {
     if (window.matchMedia("(orientation: portrait)").matches) {
@@ -63,14 +64,15 @@ links.forEach(link => {
     })
 })
 
-links.forEach(link => {
+const pageLinks = document.querySelectorAll(".page--link");
+
+pageLinks.forEach(link => {
     link.addEventListener("click", e => {
         e.preventDefault();
         const elementID = e.target.getAttribute("href").substring(1)
-        console.log(elementID);
-        const currentPosition = scrollY;
-        const toElement = document.getElementById(elementID);
-
+        document.querySelector(elementID).scrollIntoView({ 
+            behavior: 'smooth' 
+          });
     })
 })
 
