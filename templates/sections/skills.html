@@ -1,0 +1,86 @@
+<section id="skills">
+
+    <!-- Terminal icon -->
+    <div class="terminal">
+      <svg class="shadow" width="230" height="172" viewBox="0 0 230 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="Vector"
+          d="M99.2127 80.3207C99.2127 77.2558 98.0275 74.4481 95.7749 72.1903L27.0778 3.49568C24.831 1.24313 22.0154 0.0552979 18.9422 0.0552979C15.8638 0.0552979 13.0482 1.24576 10.8119 3.49305L3.43775 10.8672C1.19046 13.1171 0.00262892 15.9274 0.00262892 18.9897C0.00262892 22.0681 1.19309 24.8837 3.44038 27.12L56.6387 80.3207L3.43512 133.527C1.18783 135.777 0 138.59 0 141.655C0 144.731 1.19046 147.543 3.43775 149.78L10.7878 157.129C13.0293 159.392 15.8506 160.589 18.9422 160.589C22.0286 160.589 24.8441 159.396 27.0726 157.151L95.7806 88.4484C98.0275 86.1963 99.2127 83.3882 99.2127 80.3207Z"
+          fill="#001C65" />
+        <path id="Indicator"
+          d="M218.58 139.668H77.0474C73.8914 139.668 71.0837 140.799 68.9061 142.966C66.7609 145.122 65.627 147.929 65.627 151.086V160.522C65.627 163.699 66.7692 166.512 68.9092 168.646C71.0627 170.805 73.8778 171.945 77.0474 171.945H218.58C221.751 171.945 224.564 170.802 226.699 168.66C228.858 166.509 230 163.694 230 160.519V151.082C230 147.924 228.865 145.117 226.696 142.936C224.543 140.799 221.736 139.668 218.58 139.668Z"
+          fill="#001C65" />
+      </svg>
+    </div>
+
+    <!-- Skills cards -->
+      <div class="container row wrapper">
+      <div class="card card__skill">
+        <img src="{{ url_for('static', filename='images/Skills/Front-End.svg') }}" alt="front-end" class="card__img">
+        <h3 class="card__title">Front-end Developer</h3>
+        <p class="card__text">
+          Front-end side is the one I have worked with the most. I like to develop the front-end of apps and websites.
+        </p>
+
+        <p class="card__text">
+          I have worked with HTML CSS/SASS and JavaScript, also I have been learning to use React and hooks and I have
+          made some small projects using these technologies that you can see in the <a
+            href="{{ url_for('views.home') }}#projects">projects section.</a>
+        </p>
+
+        <div class="card__skills_logos">
+          <img src="{{ url_for('static', filename='images/Skills/html.png') }}" alt="html logo">
+          <img src="{{ url_for('static', filename='images/Skills/css.png') }}" alt="css logo">
+          <img src="{{ url_for('static', filename='images/Skills/js.png') }}" alt="Javascript logo">
+          <img src="{{ url_for('static', filename='images/Skills/React.svg') }}" alt="React logo">
+        </div>
+
+      </div>
+
+      <div class="card card__skill">
+        <img src="{{ url_for('static', filename='images/Skills/Back-End.png') }}" alt="back-end" class="card__img">
+        <h3 class="card__title">Back-end Apprentice</h3>
+        <p class="card__text">
+          As I started coding with Python, back-end was always something that interested me a lot. I'm always trying to
+          learn and put in practice these kind of technologies so I can improve my back-end skills
+        </p>
+
+
+        <p class="card__text">
+          I have worked with some back-end technologies such as Pythons Flask, and Django, and other frameworks like
+          Node.js
+        </p>
+
+        <div class="card__skills_logos">
+          <img src="{{ url_for('static', filename='images/Skills/Django.svg') }}" alt="Django logo">
+          <img src="{{ url_for('static', filename='images/Skills/Flask.svg') }}" alt="Flask logo">
+          <img src="{{ url_for('static', filename='images/Skills/Node_js.png') }}" alt="Nodejs logo">
+        </div>
+
+      </div>
+
+      <div class="card card__skill">
+        <img src="{{ url_for('static', filename='images/Skills/Python_Logo.svg') }}" alt="python_logo"
+          class="card__img">
+        <h3 class="card__title">Python Enthusiast</h3>
+        <p class="card__text">
+          I starting my journey as programmer with Python. I really like how powerfull and clean this language is. My
+          firsts projects as apprentice were small python codes and I loved how I could do amazing an simple scripts
+          using Python.
+        </p>
+        <p class="card__text">
+          I have used different modules of python for different tasks, such as smtp library, pandas, numpy, tkinter,
+          scraping with Beautiful soup, and some other libraries.
+        </p>
+
+        <div class="card__skills_logos">
+          <img src="{{ url_for('static', filename='images/Skills/NumPy.png') }}" alt="Numpy logo">
+          <img src="{{ url_for('static', filename='images/Skills/Pandas.png') }}" alt="Pandas logo">
+          <img class="large__img" src="{{ url_for('static', filename='images/Skills/bs.png') }}"
+            alt="Beautiful Soup logo">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>

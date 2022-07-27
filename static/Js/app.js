@@ -31,7 +31,6 @@ darkButton.addEventListener("click", e => {
     checkIfDarkMode();
 })
 
-
 function checkOrientation() {
     if (window.matchMedia("(orientation: portrait)").matches) {
 
@@ -56,12 +55,22 @@ const links = document.querySelectorAll(".nav__item")
 
 links.forEach(link => {
     link.addEventListener("click", (e) => {
-        console.log(e)
         hamburger.classList.toggle("change");
         navLinks.classList.toggle("open");
         links.forEach(link => {
             link.classList.toggle('fade')
         })
+    })
+})
+
+links.forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        const elementID = e.target.getAttribute("href").substring(1)
+        console.log(elementID);
+        const currentPosition = scrollY;
+        const toElement = document.getElementById(elementID);
+
     })
 })
 

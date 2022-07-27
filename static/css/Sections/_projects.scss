@@ -7,6 +7,8 @@ $font-size-project: 1.5rem;
     --clr-html: #e34c26;
     --clr-js: #f0db4f;
     --clr-css: #264de4;
+    --clr-jQuery: #0769AD;
+    --clr-python: #4B8BBE;
 
 
     min-height: 100vh;
@@ -28,16 +30,18 @@ $font-size-project: 1.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 5rem;
+    z-index: 2;
     place-items: center;
 }
 
 .project__card {
+    z-index: inherit;
     background-size: cover;
     aspect-ratio: 1 / 1;
     height: auto;
+    max-width: 320px;
     border-radius: 0.5rem;
     overflow: hidden;
-    padding: auto 0 0;
     cursor: pointer;
     display: flex;
     align-items: flex-end;
@@ -46,11 +50,11 @@ $font-size-project: 1.5rem;
 }
 
 .project__card--content {
-    --padding: 2rem;
+    --padding: 1.5rem;
     padding: var(--padding);
     background: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.3) 20%,
-            rgba(0, 0, 0, 1));
+            rgba(0, 0, 0, 0.4) 15%,
+            rgba(0, 0, 0, 0.9));
     height: fit-content;
     
     transition: transform 500ms ease-out;
@@ -71,6 +75,7 @@ $font-size-project: 1.5rem;
         background: linear-gradient(to right, var(--col-primary), var(--col-secondary));
         position: absolute;
         bottom: -0.75ch;
+        border-radius: 0 0.15rem 0.15rem 0;
         left: calc(var(--padding) * -1);
         transform-origin: left;
 
@@ -83,6 +88,10 @@ $font-size-project: 1.5rem;
 
     & > a {
         color: rgba(255, 255, 255, 0.9);
+
+        &:hover {
+            background-color: rgba(120, 120, 120 , $alpha: 0.7);
+        }
     }
 }
 
@@ -90,6 +99,7 @@ $font-size-project: 1.5rem;
     display: flex;
     gap: 1rem;
     margin: 1rem 0 0;
+    flex-wrap: wrap;
 }
 
 .tool {
@@ -102,6 +112,7 @@ $font-size-project: 1.5rem;
         font-family: "Font Awesome 5 Brands";
         font-weight: 400;
         margin-right: 0.5rem;
+        white-space: nowrap;
     }
 }
 
@@ -142,5 +153,50 @@ $font-size-project: 1.5rem;
 
     &::before {
         content: "\f13c";
+    }
+}
+
+.jQuery {
+    background-color: var(--clr-jQuery);
+
+    &::before {
+        content: url("../images/jQuery.svg");
+        width: 0.75rem;
+        height: 0.75rem;
+        fill: var(--col-white);
+    }
+}
+
+.flask {
+    background-color: var(--clr-python);
+
+    &::before {
+        content: "\f3e2";
+    }
+}
+
+.repository--div {
+    width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    place-content: center;
+}
+
+.repository__button {
+    color: var(--col-white);
+    padding: 0.25em 0.75em;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+
+    transition: background-color 250ms ease;
+
+    &:hover {
+        background-color: rgba($color: #6F42FF, $alpha: 0.5);
+        border-radius: 0.25rem;
+    }
+
+    & > i {
+        margin-right: 0.5rem;
     }
 }
