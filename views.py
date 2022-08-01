@@ -30,8 +30,3 @@ def contact():
 def download_cv():
     path = 'static/files/Daniel_Portillo_CV.pdf'
     return send_file(path, as_attachment=True)
-
-# Internal Server Error
-@views.errorhandler(500)
-def internal_error(e):
-    return render_template('errors/500.html'), 500
