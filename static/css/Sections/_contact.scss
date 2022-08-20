@@ -9,6 +9,7 @@
 }
 
 .contact__avatar {
+    aspect-ratio: attr(width) / attr(height);
     width: 10%;
 }
 
