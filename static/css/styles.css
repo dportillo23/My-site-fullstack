@@ -389,7 +389,9 @@ body.dark .hero__dedication {
   background-color: var(--col-bg);
 }
 #projects .projects__logo {
+  aspect-ratio: attr(width)/attr(height);
   width: 40%;
+  height: auto;
   position: absolute;
   bottom: 0;
   left: -7%;

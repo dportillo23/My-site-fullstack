@@ -17,7 +17,9 @@ $font-size-project: 1.5rem;
     background-color: var(--col-bg);
 
     .projects__logo {
+        aspect-ratio: attr(width) / attr(height);
         width: 40%;
+        height: auto;
         position: absolute;
         bottom: 0;
         left: -7%;
