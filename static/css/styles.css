@@ -103,6 +103,7 @@ body {
 .nav__logo img {
   aspect-ratio: attr(width)/attr(height);
   width: 8rem;
+  height: auto;
   margin: auto 0;
 }
 
@@ -234,10 +235,11 @@ body {
   color: var(--col-font);
 }
 .hero__title img {
+  aspect-ratio: attr(width)/attr(height);
   width: 15%;
+  height: auto;
   position: absolute;
   left: 15%;
-  aspect-ratio: attr(width)/attr(height);
 }
 
 .hero__greeting {
@@ -268,8 +270,9 @@ body.dark .hero__dedication {
 }
 
 .hero__image {
-  width: 50%;
   aspect-ratio: attr(width)/attr(height);
+  width: 50%;
+  height: auto;
 }
 
 #download__button {
@@ -337,6 +340,7 @@ body.dark .hero__dedication {
 .card__skill img {
   aspect-ratio: attr(width)/attr(height);
   width: 30%;
+  height: auto;
 }
 
 .card__text {
@@ -362,6 +366,7 @@ body.dark .hero__dedication {
 .card__skills_logos img {
   aspect-ratio: attr(width)/attr(height);
   width: 50%;
+  height: auto;
   align-self: center;
   justify-self: center;
 }
@@ -605,6 +610,7 @@ body.dark .hero__dedication {
 .profile__pic {
   aspect-ratio: attr(width)/attr(height);
   width: 100%;
+  height: auto;
 }
 
 .footer__greetings {
@@ -713,6 +719,7 @@ body.dark .hero__dedication {
 .footer__end img {
   aspect-ratio: attr(width)/attr(height);
   width: 7%;
+  height: auto;
   margin-top: 1em;
 }
 
@@ -730,6 +737,7 @@ body.dark .hero__dedication {
 .contact__avatar {
   aspect-ratio: attr(width)/attr(height);
   width: 10%;
+  height: auto;
 }
 
 .sec__contact {

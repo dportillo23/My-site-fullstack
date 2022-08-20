@@ -49,7 +49,7 @@
     img {
         aspect-ratio: attr(width) / attr(height);
         width: 30%;
-
+        height: auto;
     }
 }
 
@@ -76,6 +76,7 @@
     img {
         aspect-ratio: attr(width) / attr(height);
         width: 50%;
+        height: auto;
         align-self: center;
         justify-self: center;
     }

@@ -14,10 +14,11 @@
     color: var(--col-font);
 
     img {
+        aspect-ratio: attr(width) / attr(height);
         width: 15%;
+        height: auto;
         position: absolute;
         left: 15%;
-        aspect-ratio: attr(width) / attr(height);
     }
 }
 
@@ -50,8 +51,9 @@ body.dark .hero__dedication {
 }
 
 .hero__image {
-    width: 50%;
     aspect-ratio: attr(width) / attr(height);
+    width: 50%;
+    height: auto;
 }
 
 #download__button {

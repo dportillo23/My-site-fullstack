@@ -11,6 +11,7 @@
 .contact__avatar {
     aspect-ratio: attr(width) / attr(height);
     width: 10%;
+    height: auto;
 }
 
 .sec__contact {
