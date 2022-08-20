@@ -101,6 +101,7 @@ body {
 }
 
 .nav__logo img {
+  aspect-ratio: attr(width)/attr(height);
   width: 8rem;
   margin: auto 0;
 }
@@ -236,6 +237,7 @@ body {
   width: 15%;
   position: absolute;
   left: 15%;
+  aspect-ratio: attr(width)/attr(height);
 }
 
 .hero__greeting {
@@ -267,6 +269,7 @@ body.dark .hero__dedication {
 
 .hero__image {
   width: 50%;
+  aspect-ratio: attr(width)/attr(height);
 }
 
 #download__button {
@@ -332,6 +335,7 @@ body.dark .hero__dedication {
   transition: transform ease-in-out 0.5s;
 }
 .card__skill img {
+  aspect-ratio: attr(width)/attr(height);
   width: 30%;
 }
 
@@ -356,6 +360,7 @@ body.dark .hero__dedication {
   width: 75%;
 }
 .card__skills_logos img {
+  aspect-ratio: attr(width)/attr(height);
   width: 50%;
   align-self: center;
   justify-self: center;
@@ -598,6 +603,7 @@ body.dark .hero__dedication {
 }
 
 .profile__pic {
+  aspect-ratio: attr(width)/attr(height);
   width: 100%;
 }
 
@@ -705,6 +711,7 @@ body.dark .hero__dedication {
 }
 
 .footer__end img {
+  aspect-ratio: attr(width)/attr(height);
   width: 7%;
   margin-top: 1em;
 }

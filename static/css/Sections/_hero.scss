@@ -17,6 +17,7 @@
         width: 15%;
         position: absolute;
         left: 15%;
+        aspect-ratio: attr(width) / attr(height);
     }
 }
 
@@ -50,6 +51,7 @@ body.dark .hero__dedication {
 
 .hero__image {
     width: 50%;
+    aspect-ratio: attr(width) / attr(height);
 }
 
 #download__button {

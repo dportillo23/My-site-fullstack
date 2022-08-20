@@ -47,6 +47,7 @@
     transition: transform ease-in-out 0.5s;
 
     img {
+        aspect-ratio: attr(width) / attr(height);
         width: 30%;
 
     }
@@ -73,6 +74,7 @@
     width: 75%;
 
     img {
+        aspect-ratio: attr(width) / attr(height);
         width: 50%;
         align-self: center;
         justify-self: center;

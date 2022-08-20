@@ -15,7 +15,9 @@
 }
 
 .profile__pic {
+    aspect-ratio: attr(width) / attr(height);
     width: 100%;
+    
 }
 
 .footer__greetings {
@@ -109,6 +111,7 @@
 }
 
 .footer__end img {
+    aspect-ratio: attr(width) / attr(height);
     width: 7%;
     margin-top: 1em;
 }
