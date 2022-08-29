@@ -26,8 +26,7 @@
 <meta property="twitter:image" content="{{ url_for('static', filename='images/Logos/Logo.svg') }}">
 
   <!-- Stylesheet -->
-  <% set style_filename = {{CSS}} %>
-  <link rel="stylesheet" href="{{ url_for('static', filename=style_filename)}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ CSS)}}">
 
   <!-- icon -->
   <link rel="icon" href="{{ url_for('static', filename='images/Logos/Logo.svg') }}">
