@@ -85,6 +85,14 @@ body {
   z-index: -1;
 }
 
+.margin--bottom {
+  margin-bottom: 5em;
+}
+
+.padding--top {
+  padding-top: 8em;
+}
+
 .card {
   border-radius: 1rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
@@ -300,14 +308,6 @@ form {
 
 .contact__span {
   color: var(--col-white);
-}
-
-.margin--bottom {
-  margin-bottom: 5em;
-}
-
-.padding--top {
-  padding-top: 8em;
 }
 
 /* toggle button */
