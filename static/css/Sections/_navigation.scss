@@ -1,8 +1,19 @@
-
 .nav {
     padding-top: 2em;
     align-items: center;
     position: relative;
+
+    &.sticky {
+        padding: 1em 0;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(0.5rem);
+        z-index: 10;
+
+        .nav__logo img {
+            width: 6rem;
+        }
+    }
 }
 
 .nav__logo img {

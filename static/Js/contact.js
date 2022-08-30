@@ -1,3 +1,6 @@
+const $ = (selector) => document.querySelector(selector)
+const $$ = (selector) => document.querySelectorAll(selector)
+
 const contactBtn = document.getElementById("contactBtn");
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -5,8 +8,8 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 
 // Dark Mode
-const darkButton = document.querySelector(".nav__dark");
-const navLogo = document.querySelector(".logo--navigation");
+const darkButton = $(".nav__dark");
+const navLogo = $(".logo--navigation");
 
 const darkModePath = "static/images/Logos/Logo_dark_mode.svg"
 const lightModePath = "static/images/Logos/Logo.svg"
@@ -47,9 +50,9 @@ window.addEventListener('resize', checkOrientation)
 
 
 //  Hamburger
-const hamburger = document.querySelector(".hamburger")
-const navLinks = document.querySelector(".nav__list")
-const links = document.querySelectorAll(".nav__item")
+const hamburger = $(".hamburger")
+const navLinks = $(".nav__list")
+const links = $$(".nav__item")
 
 links.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -71,6 +74,14 @@ hamburger.addEventListener("click", () => {
     })
 })
 
+// Sticky bar when scrolling
+const navBar = $('.nav');
+
+window.addEventListener('scroll', e => {
+    if (window.matchMedia('(max-width: 800px)')) {return}
+    navBar.classList.toggle('sticky', window.scrollY > 70)
+})
+
 // Year
 const currentYear = new Date().getFullYear();
-document.querySelector(".year").innerHTML = currentYear;
+$(".year").innerHTML = currentYear;

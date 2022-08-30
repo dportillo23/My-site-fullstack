@@ -1,11 +1,14 @@
+const $ = (selector) => document.querySelector(selector)
+const $$ = (selector) => document.querySelectorAll(selector)
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add("dark");
 }
 
 // Dark Mode
-const darkButton = document.querySelector(".nav__dark");
-const navLogo = document.querySelector(".logo--navigation");
-const bigLogo = document.querySelector(".projects__logo");
+const darkButton = $(".nav__dark");
+const navLogo = $(".logo--navigation");
+const bigLogo = $(".projects__logo");
 
 const darkModePath = "static/images/Logos/Logo_dark_mode.svg"
 const lightModePath = "static/images/Logos/Logo.svg"
@@ -32,27 +35,13 @@ darkButton.addEventListener("click", e => {
 
 const contactBtn = document.getElementById("contactBtn");
 
-function checkOrientation() {
-    if (window.matchMedia("(orientation: portrait)").matches) {
 
-        contactBtn.classList.remove("nav__btn", "btn");
-        contactBtn.classList.add("nav__link");
-
-    }
-    if (window.matchMedia("(orientation: landscape)").matches) {
-        contactBtn.classList.add("nav__btn", "btn");
-        contactBtn.classList.remove("nav__link")
-    }
-}
-
-checkOrientation()
-window.addEventListener('resize', checkOrientation)
 
 
 //  Hamburger
-const hamburger = document.querySelector(".hamburger")
-const navLinks = document.querySelector(".nav__list")
-const links = document.querySelectorAll(".nav__item")
+const hamburger = $(".hamburger")
+const navLinks = $(".nav__list")
+const links = $$(".nav__item")
 
 links.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -64,7 +53,7 @@ links.forEach(link => {
     })
 })
 
-const pageLinks = document.querySelectorAll(".page--link");
+const pageLinks = $$(".page--link");
 
 pageLinks.forEach(link => {
     link.addEventListener("click", e => {
@@ -85,15 +74,50 @@ hamburger.addEventListener("click", () => {
     })
 })
 
+// Check Orientation
+
+function checkOrientation() {
+    if (window.matchMedia("(orientation: portrait)").matches) {
+
+        contactBtn.classList.remove("nav__btn", "btn");
+        contactBtn.classList.add("nav__link");
+
+    }
+    if (window.matchMedia("(orientation: landscape)").matches) {
+        contactBtn.classList.add("nav__btn", "btn");
+        contactBtn.classList.remove("nav__link")
+    }
+}
+
+function checkSize() {
+    if (window.matchMedia('(min-width: 800px)')) {
+        hamburger.classList.remove('change');
+    }
+}
+
+checkOrientation()
+checkSize()
+window.addEventListener('resize', () => {
+    checkOrientation();
+    checkSize()
+})
+
 // Projects background images
-const projectImages = document.querySelectorAll(".project__card");
+const projectImages = $$(".project__card");
 
 projectImages.forEach(element => {
     const imageUrl = `static/images/projects/${element.dataset.bg}`;
     element.style.backgroundImage = (`url("${imageUrl}")`);
 });
 
+// Sticky bar when scrolling
+const navBar = $('.nav');
+
+window.addEventListener('scroll', e => {
+    navBar.classList.toggle('sticky', window.scrollY > 70 && !hamburger.classList.contains('change'))
+})
+
 
 // Year
 const currentYear = new Date().getFullYear();
-document.querySelector(".year").innerHTML = currentYear;
+$(".year").innerHTML = currentYear;
