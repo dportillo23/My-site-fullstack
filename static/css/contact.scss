@@ -17,6 +17,9 @@
 /* Contact Page */
 @import './Sections/contact';
 
+/* Hamburger */
+@import './utilities/hamburger';
+
 /* toggle button */
 @import './utilities/toggle';
 
@@ -25,4 +28,7 @@
 
 /* Footer */
 @import './Sections/footer';
+
+/* Media Queries */
+@import './General/mediaQueries';
 

@@ -78,7 +78,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         background: linear-gradient(to bottom right, var(--col-primary), var(--col-secondary));
-        z-index: 2;
+        z-index: 10;
         height: 100vh;
         width: 100%;
         clip-path: circle(50px at 90% -15%);
@@ -128,11 +128,6 @@
 
     .hamburger {
         display: inline;
-        position: absolute;
-        top: 2em;
-        right: 10%;
-        // transform: translateY(-50%);
-        z-index: 3;
     }
 
     .hero {
@@ -164,7 +159,7 @@
     }
 
     .row {
-        flex-direction: column;
+        // flex-direction: column;
         gap: 4em;
     }
 
@@ -238,4 +233,41 @@
         padding-top: 9em;
     }
 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    #Indicator {
+        animation: pop 0.7s ease-in-out infinite forwards;
+    }
+
+    .project__card {
+        &:hover .project__title::after {
+            transform: scaleX(1);
+        }
+    
+        &:hover {
+            transform: scale(1.05);
+        }
+    
+        &:hover .project__card--content {
+            transform: translateY(0);
+        }
+    }
+
+    .project__card--content {
+        transform: translateY(calc(100% - var(--padding) - 3rem));
+
+    }
+
+    .project__title {
+
+        &::after {
+            transform: scaleX(0);
+        }
+        
+    }
+
+    * {
+        scroll-behavior: smooth;
+    }
 }

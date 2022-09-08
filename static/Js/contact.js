@@ -48,6 +48,8 @@ function checkOrientation() {
 checkOrientation()
 window.addEventListener('resize', checkOrientation)
 
+const windowQuery = window.innerWidth < 800
+
 
 //  Hamburger
 const hamburger = $(".hamburger")
@@ -56,14 +58,15 @@ const links = $$(".nav__item")
 
 links.forEach(link => {
     link.addEventListener("click", (e) => {
-        console.log(e)
-        hamburger.classList.toggle("change");
-        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("change", windowQuery);
+        navLinks.classList.toggle("open", windowQuery);
         links.forEach(link => {
-            link.classList.toggle('fade')
+            link.classList.toggle('fade', windowQuery)
         })
     })
 })
+
+const pageLinks = $$(".page--link");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("change");

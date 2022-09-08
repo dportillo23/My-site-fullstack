@@ -1,9 +1,8 @@
 .hamburger {
     display: inline-block;
     cursor: pointer;
-    position: absolute;
-    right: 0;
     display: none;
+    z-index: 11;
 }
 
 .bar1,
@@ -26,6 +25,7 @@
 
 .change {
     position: fixed;
+    right: 10%;
 
     * {
         background: var(--col-white);

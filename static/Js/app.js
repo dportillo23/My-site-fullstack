@@ -35,7 +35,7 @@ darkButton.addEventListener("click", e => {
 
 const contactBtn = document.getElementById("contactBtn");
 
-
+const windowQuery = window.innerWidth < 800
 
 
 //  Hamburger
@@ -45,25 +45,15 @@ const links = $$(".nav__item")
 
 links.forEach(link => {
     link.addEventListener("click", (e) => {
-        hamburger.classList.toggle("change");
-        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("change", windowQuery);
+        navLinks.classList.toggle("open", windowQuery);
         links.forEach(link => {
-            link.classList.toggle('fade')
+            link.classList.toggle('fade', windowQuery)
         })
     })
 })
 
 const pageLinks = $$(".page--link");
-
-pageLinks.forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        const elementID = e.target.getAttribute("href").substring(1)
-        document.querySelector(elementID).scrollIntoView({ 
-            behavior: 'smooth' 
-          });
-    })
-})
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("change");
