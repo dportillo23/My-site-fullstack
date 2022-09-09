@@ -401,6 +401,7 @@ body.dark .hero__dedication {
   --clr-css: #264de4;
   --clr-jQuery: #0769AD;
   --clr-python: #4B8BBE;
+  --clr-mui: #00b0ff;
   min-height: 100vh;
   position: relative;
   padding: 5em 0 15em;
@@ -551,6 +552,16 @@ body.dark .hero__dedication {
 }
 .flask::before {
   content: "\f3e2";
+}
+
+.mui {
+  background-color: var(--clr-mui);
+}
+.mui::before {
+  content: url("../images/material-ui.svg");
+  width: 0.75rem;
+  height: 0.75rem;
+  fill: var(--col-white);
 }
 
 .repository--div {
