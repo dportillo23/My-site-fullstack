@@ -3,14 +3,15 @@
 {% endwith %}
 
 <body class="toggable">
-      <!-- Navigation bar section -->
-      {% include "navbar.html" %}
+  <!-- Navigation bar section -->
+  {% include "navbar.html" %}
 
   <header id="home">
     <!-- Hero section -->
     <div class="hero container">
       <div class="hero__title">
-        <img width="222" height="236" class="avatar" src="{{ url_for('static', filename='images/Logos/avataaars 1.svg') }}" alt="avatar">
+        <img width="222" height="236" class="avatar"
+          src="{{ url_for('static', filename='images/Logos/avataaars 1.svg') }}" alt="avatar">
         <div class="hero__greeting">
           <h2>Hi!</h2>
           <h1 class="hero__me">I'm Daniel.</h1>
@@ -22,7 +23,8 @@
       </h2>
       <a class="btn" id="download__button" href="{{ url_for('views.download_cv') }}"><i
           class="fa-regular fa-file-pdf"></i>Download CV</a>
-      <img width="389" height="169" class="hero__image" src="{{ url_for('static', filename='images/Bridge.svg') }}" alt="bridge-img">
+      <img width="389" height="169" class="hero__image" src="{{ url_for('static', filename='images/Bridge.svg') }}"
+        alt="bridge-img">
 
 
     </div>
@@ -48,7 +50,8 @@
     <div class="container">
       <div class="row wrapper">
         <div class="footer__me">
-          <img width="158" height="165" src="{{ url_for('static', filename='images/Logos/NEW_PIC.webp') }}" alt="profile" class="profile__pic">
+          <img width="158" height="165" src="{{ url_for('static', filename='images/Logos/NEW_PIC.webp') }}"
+            alt="profile" class="profile__pic">
           <h1>Hello!</h1>
           <div class="footer__greetings">
             <p>I’m a civil engineer, with a master in Structural, Foundation and Materials Engineering who now discover
@@ -61,21 +64,28 @@
 
         <div class="footer__social">
 
-          <a class="footer__social__link" href="https://github.com/dportillo23" aria-label="Github"><i
-              class="fab fa-github"></i></a>
-          <a class="footer__social__link" href="https://www.linkedin.com/in/daniel-portillo23" aria-label="LinkedIn"><i
-              class="fab fa-linkedin-in"></i></a>
-          <a class="footer__social__link" href="https://twitter.com/DaniDev23"><i class="fab fa-twitter"
-              aria-label="Twitter"></i></a>
+          <a class="footer__social__link" href="https://github.com/dportillo23" aria-label="Github" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="footer__social__link" href="https://www.linkedin.com/in/daniel-portillo23" aria-label="LinkedIn"
+            rel="noopener">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="footer__social__link" href="https://twitter.com/DaniDev23" aria-label="Twitter" rel="noopener">
+            <i class="fab fa-twitter"></i>
+            </a>
           <a class="footer__social__link" href="https://stackoverflow.com/users/19015640/daniel-portillo"
-            aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+            aria-label="Stack Overflow" rel="noopener">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
         </div>
 
 
       </div>
       <div class="footer__end">
         <p class="copyright">© <span class="year">2021</span>. Made and powered by me</p>
-        <img width="3810" height="2151" src="{{ url_for('static', filename='images/Logos/Logo_black&white.svg') }}" alt="" class="footer__logo" loading="lazy">
+        <img width="3810" height="2151" src="{{ url_for('static', filename='images/Logos/Logo_black&white.svg') }}"
+          alt="" class="footer__logo" loading="lazy">
       </div>
     </div>
   </footer>
